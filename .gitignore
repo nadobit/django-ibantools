@@ -1,1 +1,4 @@
+/dist
+/django_ibantools.egg-info
+
 *.pyc
