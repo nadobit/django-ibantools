@@ -18,7 +18,11 @@ Quick start
 
 2. Run `python manage.py migrate` to create the bank models.
 
-3. Import official bank csv file from:
-   http://www.bundesbank.de/Navigation/DE/Aufgaben/Unbarer_Zahlungsverkehr/Serviceangebot/Bankleitzahlen/bankleitzahlen.html
-   bzw.:
-   http://www.bundesbank.de/Redaktion/DE/Downloads/Aufgaben/Unbarer_Zahlungsverkehr/Bankleitzahlen/2015_12_06/blz_2015_09_07_txt.txt?__blob=publicationFile
+3. Import official bank csv
+
+    Command:
+    ./manage.py import_bundesbank_bankleitzahlen ~/Downloads/blz_2015_09_07_txt.txt
+
+    Resources:
+	- http://www.bundesbank.de/Navigation/DE/Aufgaben/Unbarer_Zahlungsverkehr/Serviceangebot/Bankleitzahlen/bankleitzahlen.html
+	- http://www.bundesbank.de/Redaktion/DE/Downloads/Aufgaben/Unbarer_Zahlungsverkehr/Bankleitzahlen/2015_12_06/blz_2015_09_07_txt.txt?__blob=publicationFile
