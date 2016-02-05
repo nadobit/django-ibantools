@@ -13,11 +13,12 @@ class Command(BaseCommand):
     def handle(self, *args, **options):
 
         Bankleitzahl.objects.all().delete()
+        csv.register_dialect('bundesbank', delimiter='|', quoting=csv.QUOTE_NONE)
 
         with open(options['csvfile'], 'rb') as csvfile:
-            reader = csv.reader(csvfile)
+            reader = csv.reader(csvfile, 'bundesbank')
             for line in reader:
-                data = unicode(line[0], "ISO-8859-1")
+                data = unicode(''.join(line), "ISO-8859-1")
                 satz = Bankleitzahl.objects.create()
 
                 satz.bankleitzahl = unicode(data[0:8]).strip()
