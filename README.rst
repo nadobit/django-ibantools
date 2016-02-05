@@ -25,4 +25,4 @@ Quick start
 
     Resources:
 	- http://www.bundesbank.de/Navigation/DE/Aufgaben/Unbarer_Zahlungsverkehr/Serviceangebot/Bankleitzahlen/bankleitzahlen.html
-	- http://www.bundesbank.de/Redaktion/DE/Downloads/Aufgaben/Unbarer_Zahlungsverkehr/Bankleitzahlen/2015_12_06/blz_2015_09_07_txt.txt?__blob=publicationFile
+    - http://www.bundesbank.de/Redaktion/DE/Downloads/Aufgaben/Unbarer_Zahlungsverkehr/Bankleitzahlen/2016_03_06/blz_2015_12_07_txt.txt?__blob=publicationFile
