@@ -11,6 +11,7 @@ class BankleitzahlAdmin(admin.ModelAdmin):
         'bezeichnung',
         'ort',
         'pruefzifferberechnungsmethode',
+        'bic',
     )
     list_filter = (
         'zahlungsdienstleister',
@@ -19,7 +20,10 @@ class BankleitzahlAdmin(admin.ModelAdmin):
     )
     search_fields = (
         'bezeichnung',
-        'ort'
+        'ort',
+        'bankleitzahl',
+        'bic',
+        'postleitzahl',
     )
     ordering = ()
     actions_selection_counter = True
