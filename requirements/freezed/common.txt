@@ -1,0 +1,11 @@
+certifi==2017.4.17
+chardet==3.0.3
+Django==1.11.2
+idna==2.5
+pkginfo==1.4.1
+pytz==2017.2
+requests==2.17.3
+requests-toolbelt==0.8.0
+tqdm==4.14.0
+twine==1.9.1
+urllib3==1.21.1
