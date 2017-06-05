@@ -9,11 +9,11 @@ os.chdir(os.path.normpath(os.path.join(os.path.abspath(__file__), os.pardir)))
 
 setup(
     name='django-ibantools',
-    version='0.2',
-    packages=['bank'],
+    version='0.4',
+    packages=['ibantools'],
     include_package_data=True,
     license='BSD License',
-    description='A simple IBAN/Bic Datamanager app',
+    description='A simple IBAN/Bic Helper app',
     long_description=README,
     url='https://github.com/nadobit/django-ibantools',
     author='Bastian Probian',
@@ -21,7 +21,7 @@ setup(
     classifiers=[
         'Environment :: Web Environment',
         'Framework :: Django',
-        'Framework :: Django :: 1.8',
+        'Framework :: Django :: 1.11',
         'Intended Audience :: Developers',
         'License :: OSI Approved :: BSD License',
         'Operating System :: OS Independent',

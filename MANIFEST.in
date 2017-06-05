@@ -1,5 +1,6 @@
 include LICENSE
 include README.rst
 recursive-include docs *
-recursive-include bank/management *
-recursive-include bank/migrations *
+recursive-include ibantools/management *
+recursive-include ibantools/migrations *
+recursive-include ibantools/locale *

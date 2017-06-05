@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 import csv
 from django.core.management.base import BaseCommand
-from ...models import Bankleitzahl
+from ...models import BankCodeDE
 
 
 class Command(BaseCommand):
@@ -12,30 +12,30 @@ class Command(BaseCommand):
 
     def handle(self, *args, **options):
 
-        Bankleitzahl.objects.all().delete()
+        BankCodeDE.objects.all().delete()
         csv.register_dialect('bundesbank', delimiter='|', quoting=csv.QUOTE_NONE)
 
         with open(options['csvfile'], 'rb') as csvfile:
             reader = csv.reader(csvfile, 'bundesbank')
             for line in reader:
                 data = unicode(''.join(line), "ISO-8859-1")
-                satz = Bankleitzahl.objects.create()
+                satz = BankCodeDE.objects.create()
 
-                satz.bankleitzahl = unicode(data[0:8]).strip()
-                satz.zahlungsdienstleister = unicode(data[8:9]).strip()
-                satz.bezeichnung = unicode(data[9:67]).strip()
-                satz.postleitzahl = unicode(data[67:72]).strip()
-                satz.ort = unicode(data[72:107]).strip()
-                satz.kurzbezeichnung = unicode(data[107:134]).strip()
+                satz.bank_code = unicode(data[0:8]).strip()
+                satz.payment_service_provider = unicode(data[8:9]).strip()
+                satz.description = unicode(data[9:67]).strip()
+                satz.zip_code = unicode(data[67:72]).strip()
+                satz.city = unicode(data[72:107]).strip()
+                satz.short_description = unicode(data[107:134]).strip()
                 satz.pan = unicode(data[134:139]).strip()
                 satz.bic = unicode(data[139:150]).strip()
-                satz.pruefzifferberechnungsmethode = unicode(data[150:152]).strip()
-                satz.datensatz = unicode(data[152:158]).strip()
-                satz.indikator_geaendert = unicode(data[158:159]).strip()
-                satz.indikator_loeschung = unicode(data[159:160]).strip()
-                satz.nachfolge_bankleitzahl = unicode(data[160:168]).strip()
-                satz.iban_regel = unicode(data[168:174]).strip()
+                satz.check_digit_method = unicode(data[150:152]).strip()
+                satz.dataset_number = unicode(data[152:158]).strip()
+                satz.indicator_changed = unicode(data[158:159]).strip()
+                satz.indicator_deleted = unicode(data[159:160]).strip()
+                satz.succession_bank_code = unicode(data[160:168]).strip()
+                satz.iban_rule = unicode(data[168:174]).strip()
 
                 satz.save()
 
-            print "Import abgeschlossen"
+            print "Import Done"

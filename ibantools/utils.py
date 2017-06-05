@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 import re
 from . import models
 from . import operations
@@ -9,7 +10,7 @@ def validate_bic(bic):
         return False
 
     bic = bic.upper()
-    count = len(models.Bankleitzahl.objects.filter(bic=bic))
+    count = len(models.BankCodeDE.objects.filter(bic=bic))
 
     return True if count > 0 else False
 

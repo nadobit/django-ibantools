@@ -1,29 +1,29 @@
 # -*- coding: utf-8 -*-
 from django.contrib import admin
-from . import models
+from ibantools.models import BankCodeDE
 
 
-@admin.register(models.Bankleitzahl)
-class BankleitzahlAdmin(admin.ModelAdmin):
-    readonly_fields = ()
+@admin.register(BankCodeDE)
+class BankCodeDEAdmin(admin.ModelAdmin):
+
     list_display = (
-        'bankleitzahl',
-        'bezeichnung',
-        'ort',
-        'pruefzifferberechnungsmethode',
+        'bank_code',
+        'description',
+        'city',
+        'check_digit_method',
         'bic',
     )
     list_filter = (
-        'zahlungsdienstleister',
-        'indikator_geaendert',
-        'indikator_loeschung',
+        'payment_service_provider',
+        'indicator_changed',
+        'indicator_deleted',
     )
     search_fields = (
-        'bezeichnung',
-        'ort',
-        'bankleitzahl',
+        'description',
+        'city',
+        'bank_code',
         'bic',
-        'postleitzahl',
+        'zip_code',
     )
-    ordering = ()
+
     actions_selection_counter = True

@@ -1,12 +1,13 @@
+# -*- coding: utf-8 -*-
 from django.test import TestCase
-from . import models
-from . import utils
+from ibantools import models
+from ibantools import utils
 
 
 class ValidateBicTestCase(TestCase):
 
     def setUp(self):
-        models.Bankleitzahl.objects.create(
+        models.BankCodeDE.objects.create(
             bic='MARKDEF1100'
         )
 

@@ -1,4 +1,6 @@
 /dist
 /django_ibantools.egg-info
+/.virtualenv
 
 *.pyc
+*.mo
