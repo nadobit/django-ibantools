@@ -18,7 +18,7 @@ def validate_bic(bic):
 def validate_iban(iban):
 
     iban = iban.upper()
-    if not re.match('^[A-Z]{2}[A-Z0-9]{20}$', iban):
+    if not re.match('^[A-Z]{2}[0-9]{20}$', iban):
         return False
 
     checksum = int("%s%d%s" % (
