@@ -9,11 +9,11 @@ von IBAN Nummern aus alten Bankleitzahlen und Kontonummern
 Quick start
 -----------
 
-1. Add "bank" to your INSTALLED_APPS setting like this::
+1. Add "ibantools" to your INSTALLED_APPS setting like this::
 
     INSTALLED_APPS = [
         ...
-        'bank',
+        'ibantools',
     ]
 
 2. Run `python manage.py migrate` to create the bank models.

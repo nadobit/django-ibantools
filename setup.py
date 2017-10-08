@@ -9,7 +9,7 @@ os.chdir(os.path.normpath(os.path.join(os.path.abspath(__file__), os.pardir)))
 
 setup(
     name='django-ibantools',
-    version='0.4',
+    version='0.4.2',
     packages=['ibantools'],
     include_package_data=True,
     license='BSD License',
